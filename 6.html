@@ -1,0 +1,112 @@
+<html>
+<head>
+	<style>
+		body{
+			text-align:center;
+		}
+		h1{
+			color:green;
+			font-size:4em;
+		}
+		button{
+			width:20%;
+			height:10%;
+			font-size:2em;
+			color:red;
+			background:skyblue;
+		}
+	</style>
+</head>
+<body>
+	<h1>시퀀스 2개</h1>
+	<img id='img1' src='1.png'>
+	<img id='img2' src='2.png'><br><br><br>
+
+	<button onclick='a1();'>Seq1</button>
+	<button onclick='a2();'>Seq2</button>
+	<button onclick='a3();'>Stop</button>
+	<button onclick='a4();'>Stop</button>
+	
+	<script>
+		setInterval(timer1,8);
+		setInterval(timer2,8);
+		var step1=0;	
+		var step2=0;	
+
+		function timer1()
+		{
+			switch(step1){
+				case 1:
+					document.getElementById('img1').src='3.png';
+					step1=2;
+				break;	
+			
+				case 2:
+					
+					document.getElementById('img1').src='4.png';
+					step1=3;
+				break;
+				
+				case 3:
+					document.getElementById('img1').src='5.png';
+					step1=4;
+				break;
+				
+				case 4:
+					document.getElementById('img1').src='6.png';
+					step1=1;
+				break;
+				case 9:
+				break;
+			
+				
+			}			
+		}
+		function timer2()
+		{
+			switch(step2)
+			{
+				case 10:
+					document.getElementById('img2').src='7.png';
+					step2=11;
+				break;
+				case 11:
+					document.getElementById('img2').src='8.png';
+					step2=12;
+				break;
+				case 12:
+					document.getElementById('img2').src='9.png';
+					step2=13;
+				break;
+				case 13:
+					document.getElementById('img2').src='10.png';
+					step2=10;
+				break;
+				case 9:
+				break;
+			
+			}		
+
+		}
+		
+		function a1()
+		{
+			//document.getElementById('img1').src='3.png';
+			step1=1;
+		}
+		function a2()
+		{
+			//document.getElementById('img2').src='4.png';
+			step2=10;
+		}
+		function a3()
+		{
+			step1=9;
+		}
+		function a4()
+		{
+			step2=9;
+		}
+	</script>
+</body>
+</html>
